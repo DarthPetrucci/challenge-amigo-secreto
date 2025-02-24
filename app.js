@@ -1,3 +1,6 @@
+//Proyecto ejecutdao por : Diego Fernando Amézquita Millán
+//Conctacto : diegof.amezquita@gmail.com
+
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 
 
@@ -38,3 +41,26 @@ function listarAmigos() {
     }
 
 }
+
+function sortearAmigo() {
+
+    var amigoSecreto= "";       /*Declara una variable para almacenar el amigo secreto*/
+    resultado.innerHTML = "";   /*Limpia el elemento de resultado*/
+
+    if(amigos.length == 0) {
+
+        alert("Por favor, agregue amigos antes de sortear."); /*Muestra un mensaje de alerta al usuario indicando que debe agregar amigos antes de sortear*/
+    }
+
+    else {
+
+        amigoSecreto = amigos[Math.floor(Math.random() * amigos.length)]; /*Selecciona un amigo aleatorio de la lista de amigos*/
+        const resultado = document.getElementById("resultado"); /*Obtiene el elemento de resultado*/
+        console.log(amigoSecreto); /*Imprime el amigo secreto en la consola*/
+
+        const NuevoElemento = document.createElement("li"); /*Crea un nuevo elemento de lista*/
+        NuevoElemento.textContent = "el Amigo Secreto es: " + amigoSecreto; /*Asigna el nombre del amigo secreto al nuevo elemento de lista*/
+        resultado.appendChild(NuevoElemento); /*Agrega el nuevo elemento de lista al elemento de resultado*/
+    }
+
+    }
